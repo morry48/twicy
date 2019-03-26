@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Twic
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav
+      .nav-wrapper
+        %a.brand-logo.right{:href => "#"} Twic
+        %ul#nav-mobile.left.hide-on-med-and-down
+          %li
+            %a{:href => "tweet-new"} 新規投稿
+          %li
+            %a{:href => "user-show"} マイページ
+          %li
+            %a{:href => "user-tweets"} tweet一覧
+          %li
+            %a{:href => "collapsible.html"} ログアウト
+
+
+    = yield

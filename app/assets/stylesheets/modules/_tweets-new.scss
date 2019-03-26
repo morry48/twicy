@@ -1,0 +1,29 @@
+
+.tweets{
+  height:100%;
+  .new__tweet{
+    background-color: #ee6e73;
+    height: 60px;
+    width:200px;
+    text-align:center;
+    margin:30px auto;
+    border:pink 5px solid;
+    font-size:30px;
+    border-radius:20px;
+    color:white;
+  }
+  .new__tweet__box{
+    height:300px;
+    width:700px;
+    margin:40px auto;
+    margin-bottom:20px;
+    background-color:#F2F2F2;
+    border:pink 2px solid;
+    border-radius:5px;
+    padding-left:40px;
+    padding-right:40px;
+    &__text{
+      font-size:20px;
+    }
+  }
+}

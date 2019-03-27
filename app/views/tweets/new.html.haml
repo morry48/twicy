@@ -1,6 +1,7 @@
 .tweets
-  .new__tweet 新規投稿
-  .new__tweet__box
-    .new__tweet__box__text こんにちは！
+  =form_for [@tweet] do |f|
+    =f.text_field :content ,class: 'new__tweet__box'
+    =f.submit'投稿する',class: 'new__tweet__btn'
+
 
 

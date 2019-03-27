@@ -9,16 +9,20 @@
   %body
     %nav
       .nav-wrapper
-        %a.brand-logo.right{:href => "#"} Twic
+        %a.brand-logo.right{:href => "#"} Twicy
         %ul#nav-mobile.left.hide-on-med-and-down
           %li
-            %a{:href => "tweet-new"} 新規投稿
+            =link_to '新規投稿',  new_tweet_path
           %li
-            %a{:href => "user-show"} マイページ
+            =link_to 'マイページ'
           %li
-            %a{:href => "user-tweets"} tweet一覧
+            %a{:href => "user-tweets"}
+            =link_to 'TWEET一覧'
           %li
-            %a{:href => "collapsible.html"} ログアウト
+            =link_to 'USER一覧'
+          %li
+            =link_to 'ログアウト'
+
 
 
     = yield

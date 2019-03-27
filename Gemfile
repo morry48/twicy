@@ -55,4 +55,5 @@ gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 gem 'haml-rails'
 gem 'erb2haml'
+gem 'rename'
 

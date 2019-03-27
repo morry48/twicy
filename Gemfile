@@ -56,4 +56,5 @@ gem 'material_icons'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'rename'
+gem 'kaminari'
 

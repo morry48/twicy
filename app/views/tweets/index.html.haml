@@ -1,14 +1,12 @@
 .tweets
-  .tweet
-    .tweet__upper
-      .tweet__upper__name 名前
-      .tweet__upper__time 時間
-      .tweet__upper__tweet__show ツイート詳細
-    .tweet__bottom__content ツイート
-  .tweet
-    .tweet__upper
-      .tweet__upper__name 名前
-      .tweet__upper__time 時間
-      .tweet__upper__tweet__show ツイート詳細
-    .tweet__bottom__content ツイート
+  -@tweets.each do |tweet|
+    .tweet
+      .tweet__upper
+        .tweet__upper__name 名前
+        .tweet__upper__time
+          =tweet.created_at.strftime("%Y/%m/%d %H:%M")
+        .tweet__upper__tweet__show < ツイート詳細 >
+      .tweet__bottom__content
+        =tweet.content
+  =paginate(@tweets)
 

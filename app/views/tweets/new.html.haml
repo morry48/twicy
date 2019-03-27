@@ -1,6 +1,6 @@
 .tweets
   =form_for [@tweet] do |f|
-    =f.text_field :content ,class: 'new__tweet__box'
+    =f.text_area :content ,class: 'new__tweet__box'
     =f.submit'投稿する',class: 'new__tweet__btn'
 
 

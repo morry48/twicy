@@ -1,0 +1,5 @@
+.page__title ツイート編集
+.tweets
+  =form_for [@tweet] do |f|
+    =f.text_area :content ,class: 'new__tweet__box' ,autofocus:true
+    =f.submit'編集する',class: 'new__tweet__btn'

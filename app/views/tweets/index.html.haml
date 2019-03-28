@@ -8,8 +8,9 @@
           =tweet.user.nickname
         .tweet__upper__time
           =tweet.created_at.strftime("%Y/%m/%d %H:%M")
-        .tweet__upper__tweet__show
-          =link_to "ツイート詳細",  tweet_path(tweet.id)
+        -if user_signed_in?
+          .tweet__upper__tweet__show
+            =link_to "ツイート詳細",  tweet_path(tweet.id)
       .tweet__bottom__content
         =tweet.content
   =paginate(@tweets)

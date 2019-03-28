@@ -4,9 +4,7 @@ class UsersController < ApplicationController
     @tweets = current_user.tweets.page(params[:page]).per(5).order("created_at DESC")
   end
 
-  def edit
-  end
-
-  def update
+  def index
+    @users = User.all
   end
 end

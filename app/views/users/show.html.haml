@@ -12,7 +12,9 @@
         .tweet__upper__time
           =tweet.created_at.strftime("%Y/%m/%d %H:%M")
         .tweet__upper__tweet__show
-          =link_to 'ツイート編集', edit_tweet_path(current_user)
+          =link_to 'ツイート編集', "/tweets/#{tweet.id}/edit"
+        .tweet__upper__tweet__destroy
+          =link_to 'ツイート削除', "/tweets/#{tweet.id}",method: :delete
       .tweet__bottom__content
         =tweet.content
   =paginate(@tweets)

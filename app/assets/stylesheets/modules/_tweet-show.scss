@@ -1,0 +1,36 @@
+
+  .tweet{
+    width:700px;
+    margin:40px auto;
+    margin-bottom:20px;
+    background-color:#F2F2F2;
+    border:pink 2px solid;
+    border-radius:5px;
+    &__upper{
+      height:60px;
+      position:relative;
+      border:pink 2px solid;
+      display:flex;
+      padding-left:10px;
+      &__name{
+        font-size:30px;
+      }
+      &__time{
+        position:absolute;
+        right:5px;
+      }
+      &__tweet__show{
+        position:absolute;
+        bottom:2px;
+        right:10px;
+      }
+    }
+    &__bottom__content{
+      border:pink 2px solid;
+      padding-left:20px;
+      font-size:20px;
+      min-height:150px;
+      height:auto;
+      height:150px;
+    }
+  }

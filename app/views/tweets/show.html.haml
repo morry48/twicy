@@ -1,0 +1,8 @@
+.tweet
+  .tweet__upper
+    .tweet__upper__name
+      =@tweet.user.nickname
+    .tweet__upper__time
+      =@tweet.created_at.strftime("%Y/%m/%d %H:%M")
+  .tweet__bottom__content
+    =@tweet.content

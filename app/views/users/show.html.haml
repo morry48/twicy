@@ -1,6 +1,8 @@
 .page__title
   = current_user.nickname
-.user__edit ユーザー情報を編集する
+.user__edit
+  =link_to "ユーザー情報を編集する"(未完)
+  ,  edit_user_path(current_user)
 
 .tweets
   -@tweets.each do |tweet|

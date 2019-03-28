@@ -55,8 +55,14 @@ html{
       }
       &__tweet__show{
         position:absolute;
+        width:100px;
+        height:20px;
         bottom:2px;
         right:10px;
+        background-color:#ee6e73;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
       }
     }
     &__bottom__content{

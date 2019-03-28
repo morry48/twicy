@@ -11,10 +11,15 @@ before_action :move_to_index, except: :index
   end
 
   def create
-    tweet=Tweet.create(name: tweet_params[:name],image: tweet_params[:image], content: tweet_params[:content],user_id: current_user.id)
-    tweet.save
+    @tweet=Tweet.new(tweet_params)
+    @tweet.save
     redirect_to root_path
   end
+
+  def show
+    @tweet=Tweet.find(params[:id])
+  end
+
 
 
 private
@@ -23,6 +28,6 @@ private
   end
 
   def tweet_params
-    params.permit(:content, :name)
+    params.require(:tweet).permit(:content, :name).merge( user_id: current_user.id)
   end
 end

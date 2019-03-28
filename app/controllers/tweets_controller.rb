@@ -11,13 +11,30 @@ before_action :move_to_index, except: :index
   end
 
   def create
-    @tweet=Tweet.new(tweet_params)
-    @tweet.save
-    redirect_to root_path
+    Tweet.create(content: tweet_params[:content],user_id: current_user.id)
+    redirect_to root_path , notice: 'ツイートを作成しました'
   end
 
   def show
     @tweet=Tweet.find(params[:id])
+  end
+
+  def edit
+    @tweet=Tweet.find_by(id: params[:id])
+  end
+
+  def update
+    tweet = Tweet.find_by(id: params[:id])
+    if tweet.user_id == current_user.id
+      tweet.update(tweet_params)
+    end
+    redirect_to user_path , notice: 'ツイートを編集しました'
+  end
+
+  def destroy
+    tweet = Tweet.find(params[:id])
+    tweet.destroy if tweet.user_id == current_user.id
+    redirect_to user_path, notice: 'ツイートを削除しました'
   end
 
 
@@ -28,6 +45,7 @@ private
   end
 
   def tweet_params
-    params.require(:tweet).permit(:content, :name).merge( user_id: current_user.id)
+    params.require(:tweet).permit(:content,).merge(user_id: current_user.id)
   end
+
 end

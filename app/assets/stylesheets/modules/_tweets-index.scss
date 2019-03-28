@@ -5,6 +5,30 @@ html{
   background-color:#CCFFFF;
   font-family:monospace;
 }
+.page__title{
+  margin:30px auto;
+  width:300px;
+  height: 60px;
+  font-size:30px;
+  background-color:#F2F2F2;
+  border:pink 2px solid;
+  border-radius:5px;
+  line-height: 60px;
+  text-align: center;
+}
+.user__edit{
+  margin:30px auto;
+  width:150px;
+  height: 60px;
+  font-size:13px;
+  background-color:#ee6e73;
+  border:pink 2px solid;
+  border-radius:5px;
+  line-height: 60px;
+  text-align: center;
+  color:white;
+}
+
 .tweets{
   height:100%;
   .tweet{

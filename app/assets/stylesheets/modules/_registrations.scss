@@ -1,0 +1,33 @@
+h2{
+  width:150px;
+  background-color:#ee6e73;
+  margin:40px auto;
+  color:white;
+  text-align:center;
+  height:60px;
+  font-size:30px;
+  line-height: 60px;
+  border-radius:10px;
+}
+.new_user{
+  background-color:#F2F2F2;
+  width:700px;
+  margin:30px auto;
+  color:black;
+  border:3px solid pink;
+  border-radius:5px;
+  .field{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+    .actions{
+      width:150px;
+      margin:10px auto;
+      .btn{
+        background-color: #ee6e73;
+        margin:0 auto;
+        border-radius: 10px;
+    }
+  }
+}
+

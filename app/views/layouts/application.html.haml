@@ -7,19 +7,28 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+  -if  user_signed_in?
     %nav
       .nav-wrapper
-        %a.brand-logo.right{:href => "#"} Twicy
+        %a.brand-logo.right{:href => '/tweets' } Twicy
         %ul#nav-mobile.left.hide-on-med-and-down
           %li
             =link_to '新規投稿',  new_tweet_path
           %li
-            =link_to 'マイページ'
+            =link_to 'マイページ',  user_path(current_user), method: :get
           %li
-            %a{:href => "user-tweets"}
             =link_to 'TWEET一覧'
           %li
             =link_to 'USER一覧'
           %li
-            =link_to 'ログアウト'
-    = yield
+            =link_to 'ログアウト', destroy_user_session_path,  method: :delete
+  -else
+    %nav
+      .nav-wrapper
+        %a.brand-logo.right{:href => "/tweets"} Twicy
+        %ul#nav-mobile.left.hide-on-med-and-down
+          %li
+            =link_to '新規登録',  new_user_registration_path
+          %li
+            =link_to 'ログイン',  new_user_session_path
+= yield
